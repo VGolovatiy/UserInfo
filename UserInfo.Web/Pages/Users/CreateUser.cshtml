@@ -1,0 +1,39 @@
+﻿@page "/CreateUser"
+@model UserInfo.Web.Pages.Users.CreateModel
+
+<h2>Create User</h2>
+
+<form method="post" asp-action="CreateUser" asp-controller="User">
+    <div class="form-group">
+        <label asp-for="NewUser.FirstName"></label>
+        <input asp-for="NewUser.FirstName" class="form-control" />
+        <span asp-validation-for="NewUser.FirstName" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="NewUser.LastName"></label>
+        <input asp-for="NewUser.LastName" class="form-control" />
+        <span asp-validation-for="NewUser.LastName" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="NewUser.Age"></label>
+        <input asp-for="NewUser.Age" class="form-control" />
+        <span asp-validation-for="NewUser.Age" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="NewUser.CardNumber"></label>
+        <input asp-for="NewUser.CardNumber" class="form-control" />
+        <span asp-validation-for="NewUser.CardNumber" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="NewUser.PhotoPath"></label>
+        <input asp-for="NewUser.PhotoPath" class="form-control" />
+        <span asp-validation-for="NewUser.PhotoPath" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Create User</button>
+</form>
+
